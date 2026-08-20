@@ -2,12 +2,23 @@
 // See https://zmk.dev/docs/development/hardware-integration/new-shield for more
 // instructions.
 
+#include <dt-bindings/zmk/matrix_transform.h>
+
 #include "btn_macro-layouts.dtsi"
 
 / {
     chosen {
         zmk,kscan = &kscan;
         zmk,physical-layout = &default_layout;
+    };
+
+    default_transform: default_transform {
+        compatible = "zmk,matrix-transform";
+        columns = <1>;
+        rows = <1>;
+        map = <
+            RC(0, 0)
+        >;
     };
 
     kscan: kscan {
