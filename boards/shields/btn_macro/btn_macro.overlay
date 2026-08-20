@@ -29,3 +29,8 @@
             ;
     };
 };
+
+/* Disable the software-controlled blue LED */
+&blue_led {
+    status = "disabled";
+};
