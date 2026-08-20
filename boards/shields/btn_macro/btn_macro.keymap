@@ -1,0 +1,30 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+/ {
+    macros {
+        // Example macro: You can customize this macro to type text or press hotkeys
+        btn_action: btn_action {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                // Example: Press Left Ctrl + C (Copy)
+                // = <&macro_press &kp LCTRL>, <&macro_tap &kp C>, <&macro_release &kp LCTRL>;
+
+                // Example: Press F13 (commonly used for Push-to-Talk or OBS shortcuts)
+                = <&macro_tap &kp F13>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &btn_action
+            >;
+        };
+    };
+};

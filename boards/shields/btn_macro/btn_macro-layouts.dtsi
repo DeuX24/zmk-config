@@ -1,0 +1,16 @@
+// See https://zmk.dev/docs/development/hardware-integration/physical-layouts
+// for how to configure this.
+
+#include <physical_layouts.dtsi>
+
+/ {
+    default_layout: default_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        kscan = <&kscan>;
+
+        keys
+            = <&key_physical_attrs 100 100 0 0 0 0 0>
+            ;
+    };
+};
