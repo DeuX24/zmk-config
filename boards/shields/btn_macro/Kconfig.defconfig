@@ -1,6 +1,6 @@
 if SHIELD_BTN_MACRO
 
 config ZMK_KEYBOARD_NAME
-    default "Pro Macro Button"
+    default "Pro Macropad"
 
 endif # SHIELD_BTN_MACRO
