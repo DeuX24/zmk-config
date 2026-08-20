@@ -1,6 +1,6 @@
 if SHIELD_BTN_MACRO
 
 config ZMK_KEYBOARD_NAME
-    default "1-btn-macro"
+    default "Professional Macro Button"
 
 endif # SHIELD_BTN_MACRO
